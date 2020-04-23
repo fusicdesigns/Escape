@@ -30,6 +30,7 @@ class MViewController: UIViewController{
     var score = 0
     var attempts = 1
     var timer = Timer()
+    var level = 1
     
     //LOad
     override func viewDidLoad() {
@@ -49,8 +50,12 @@ class MViewController: UIViewController{
     
     //Review Button Pressed
     @IBAction func reviewButtomPressed(_ sender: UIButton) {
-        if #available( iOS 10.3,*){
-            SKStoreReviewController.requestReview()
+        if level == 1{
+            level = 2 }
+     
+        else{
+            if #available( iOS 10.3,*){
+            SKStoreReviewController.requestReview()}
         }
         
     }
@@ -83,7 +88,7 @@ class MViewController: UIViewController{
         
         
         //attempts should be >2
-        if attempts > 2{
+        if attempts > 0{
             if storyBrain.getIsQuestion() == true {
                 
                 if userGotItRight == 1  {
@@ -131,7 +136,9 @@ class MViewController: UIViewController{
         let titleText = storyText
         storyLabel.text = " "
         
-        timerInterval = 0.08 / Double(attempts)
+        
+        //change before comitt
+        timerInterval = 0.01 / Double(attempts)
         
         
         for letter in titleText{
@@ -160,7 +167,7 @@ class MViewController: UIViewController{
         self.choice2Button.setTitle("", for: .normal)
         self.choice1Button.isEnabled = false
         self.choice2Button.isEnabled = false
-        var timeForTimer = 1.0
+        var timeForTimer = 0.5
         timeForTimer = timeToRun * timerInterval + 0.5 / Double(attempts)
         
         
@@ -200,7 +207,9 @@ class MViewController: UIViewController{
         let storyNumber = storyBrain.getStoryNumber()
         
         
-        if storyNumber > 1{
+        if storyNumber > 12{
+            backGroundImage.image = UIImage(named: "background\(storyNumber-12).jpg")
+        }else if storyNumber > 1{
             backGroundImage.image = UIImage(named: "background\(storyNumber).jpg")
         }
             
@@ -210,7 +219,7 @@ class MViewController: UIViewController{
         }
         
         
-        if storyBrain.getStoryNumber() == 11{
+        if storyBrain.getStoryNumber() == 11 || storyBrain.getStoryNumber() == 24 {
             infectionsLabel.isHidden = false
             choice2Button.isHidden = true
             reviewButton.isHidden = false
@@ -221,13 +230,20 @@ class MViewController: UIViewController{
             
             if score == 10{
                 infectionsLabel.text = ("You scored \(score) out of 10\n\nLooks You've Escaped")
-                  
-                
-                backGroundImage.image = #imageLiteral(resourceName: "background11")
+                  backGroundImage.image = #imageLiteral(resourceName: "background11")
+                     choice2Button.isHidden = false
+               if  storyBrain.getStoryNumber() == 24 {
+                    reviewButton.isHidden = false}
+               else{
+                reviewButton.isHidden = True
+                }
+                score = 0
+                attempts = 1
             }
             else{
                 if attempts == 3 {
                     infectionsLabel.text = ("You scored \(score) out of 10\n\nLooks like you're still trapped, so we'll give you a little help on the next round")
+                    level = 2
                     
                 } else if attempts == 2 {
                     infectionsLabel.text = ("You scored \(score) out of 10\n\nLooks like you're still trapped\n\nOne more round on your own\n and then we'll give you a liitle help.  Try using the hints button")
