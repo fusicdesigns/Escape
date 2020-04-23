@@ -235,7 +235,7 @@ class MViewController: UIViewController{
                if  storyBrain.getStoryNumber() == 24 {
                     reviewButton.isHidden = false}
                else{
-                reviewButton.isHidden = True
+                reviewButton.isHidden = true
                 }
                 score = 0
                 attempts = 1
