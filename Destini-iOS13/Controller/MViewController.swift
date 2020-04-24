@@ -31,6 +31,8 @@ class MViewController: UIViewController{
     var attempts = 1
     var timer = Timer()
     var level = 1
+    let attemptsBeforeHelp = 1  //should be 2 for public version
+    let startTimerInterval = 0.008 //should be 0.07 for public version
     
     //LOad
     override func viewDidLoad() {
@@ -87,8 +89,8 @@ class MViewController: UIViewController{
         let userGotItRight = storyBrain.checkAnswer(userAnswer: sender.currentTitle!)
         
         
-        //attempts should be >2
-        if attempts > 0{
+       
+        if attempts > attemptsBeforeHelp{
             if storyBrain.getIsQuestion() == true {
                 
                 if userGotItRight == 1  {
@@ -138,7 +140,7 @@ class MViewController: UIViewController{
         
         
         //change before comitt
-        timerInterval = 0.01 / Double(attempts)
+        timerInterval = startTimerInterval / Double(attempts)
         
         
         for letter in titleText{
