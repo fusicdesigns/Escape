@@ -11,7 +11,7 @@
 		133B88052443751000FFB2DF /* city_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 133B88042443751000FFB2DF /* city_back.jpg */; };
 		13B08A8424526D3600AFCBC5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13B08A8224526D3600AFCBC5 /* DataModel.xcdatamodeld */; };
 		13B08AAC24539F1500AFCBC5 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B08AAB24539F1500AFCBC5 /* temp.swift */; };
-		13B08AAE24550A3300AFCBC5 /* StoryBrain2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B08AAD24550A3300AFCBC5 /* StoryBrain2.swift */; };
+		13B08AAE24550A3300AFCBC5 /* DataBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B08AAD24550A3300AFCBC5 /* DataBrain.swift */; };
 		13B08AB02455117D00AFCBC5 /* UpdateDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B08AAF2455117D00AFCBC5 /* UpdateDB.swift */; };
 		13C04DF32445419A00AB52D8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C04DF22445419A00AB52D8 /* InfoViewController.swift */; };
 		13C04DF92446212100AB52D8 /* fusicdesigns.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C04DF82446212000AB52D8 /* fusicdesigns.png */; };
@@ -30,7 +30,7 @@
 		133B88042443751000FFB2DF /* city_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = city_back.jpg; sourceTree = "<group>"; };
 		13B08A8324526D3600AFCBC5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		13B08AAB24539F1500AFCBC5 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		13B08AAD24550A3300AFCBC5 /* StoryBrain2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBrain2.swift; sourceTree = "<group>"; };
+		13B08AAD24550A3300AFCBC5 /* DataBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBrain.swift; sourceTree = "<group>"; };
 		13B08AAF2455117D00AFCBC5 /* UpdateDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDB.swift; sourceTree = "<group>"; };
 		13C04DF22445419A00AB52D8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = "Destini-iOS13/Controller/InfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		13C04DF82446212000AB52D8 /* fusicdesigns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fusicdesigns.png; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				13B08AAF2455117D00AFCBC5 /* UpdateDB.swift */,
 				AD7631E922FC64C100C6E71B /* Story.swift */,
 				AD7631EC22FC64E400C6E71B /* StoryBrain.swift */,
-				13B08AAD24550A3300AFCBC5 /* StoryBrain2.swift */,
+				13B08AAD24550A3300AFCBC5 /* DataBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 				13B08AB02455117D00AFCBC5 /* UpdateDB.swift in Sources */,
 				AD7631ED22FC64E400C6E71B /* StoryBrain.swift in Sources */,
 				1329162C244D3D72007D48B8 /* MViewController.swift in Sources */,
-				13B08AAE24550A3300AFCBC5 /* StoryBrain2.swift in Sources */,
+				13B08AAE24550A3300AFCBC5 /* DataBrain.swift in Sources */,
 				AD7631D422FC5E7E00C6E71B /* AppDelegate.swift in Sources */,
 				13B08AAC24539F1500AFCBC5 /* temp.swift in Sources */,
 				13B08A8424526D3600AFCBC5 /* DataModel.xcdatamodeld in Sources */,

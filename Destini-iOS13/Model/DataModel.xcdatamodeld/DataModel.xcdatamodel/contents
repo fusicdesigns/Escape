@@ -3,7 +3,7 @@
     <entity name="CurrentPosition" representedClassName="CurrentPosition" syncable="YES" codeGenerationType="class">
         <attribute name="attempt" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="attemptsBeforeHelp" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="storyNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="typeSpeed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
@@ -21,6 +21,6 @@
     </entity>
     <elements>
         <element name="Stories" positionX="-54" positionY="-9" width="128" height="193"/>
-        <element name="CurrentPosition" positionX="-36" positionY="81" width="128" height="28"/>
+        <element name="CurrentPosition" positionX="-36" positionY="81" width="128" height="118"/>
     </elements>
 </model>
