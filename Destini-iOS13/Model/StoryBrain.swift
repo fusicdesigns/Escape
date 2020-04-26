@@ -8,6 +8,9 @@
     
     import Foundation
     
+
+    
+    
     struct StoryBrain {
         
         var storyNumber = 0
@@ -15,7 +18,7 @@
         var clickCount = 0
         let InfectRate: Float = 3/9
         var totalInfected = 0
-        
+      
         
         let stories = [
             
@@ -248,7 +251,7 @@
                 //24
                 Story(
                     title: "Look out for updates and new apps soon",
-                    choice1: "Play again", choice1Destination: 0,
+                    choice1: "Play again", choice1Destination: 14,
                     choice2: "Play again", choice2Destination: 25,
                     correctAnswer: "0",
                     Hint: "Press a button",
@@ -269,11 +272,14 @@
         ]
         
         func getStoryTitle() -> String {
+             print ("Story no\(storyNumber)")
             return stories[storyNumber].title
         }
         
         func getIsQuestion() -> Bool {
+           
             return stories[storyNumber].isQuestion
+            
         }
         
         func getStoryHint() -> String {
@@ -310,7 +316,7 @@
         
         mutating func nextStory(userChoice: String) {
             clickCount += 1
-            
+            print("next story")
             let currentStory = stories[storyNumber]
             if userChoice == currentStory.choice1 {
                 storyNumber = currentStory.choice1Destination
@@ -322,6 +328,8 @@
                 
             }
             
+    
+          
             
             
             
@@ -329,7 +337,19 @@
             
         }
         
-        
+       mutating func firstStory(currentStoryNumber: Int){
+       
+        if currentStoryNumber == 0 {
+              storyNumber  = currentStoryNumber
+           print("first story was 0, story is \(storyNumber)")
+        } else {
+            storyNumber = currentStoryNumber
+            
+        }
+         print("first story is not 0, story is \(storyNumber)")
+       
+                  }
+                  
         
     }
     
